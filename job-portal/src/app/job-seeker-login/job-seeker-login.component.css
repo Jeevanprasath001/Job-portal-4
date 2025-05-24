@@ -1,0 +1,256 @@
+/* Inter font */
+@font-face{font-family:Inter;src:url(/assets/fonts/Inter-Regular.woff2) format("woff2"),url(/assets/fonts/Inter-Regular.woff) format("woff");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/fonts/Inter-Medium.woff2) format("woff2"),url(/assets/fonts/Inter-Medium.woff) format("woff");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/fonts/Inter-SemiBold.woff2) format("woff2"),url(/assets/fonts/Inter-SemiBold.woff) format("woff");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/fonts/Inter-Bold.woff2) format("woff2"),url(/assets/fonts/Inter-Bold.woff) format("woff");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:Inter;src:url(/assets/fonts/Inter-ExtraBold.woff2) format("woff2"),url(/assets/fonts/Inter-ExtraBold.woff) format("woff");font-weight:800;font-style:normal;font-display:swap}
+
+/* Reset */
+*{margin:0;padding:0;box-sizing:border-box}
+
+/* Global */
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,sans-serif;background:#f5f7fa;color:#1a202c;line-height:1.5}
+
+/* Variables */
+:root{--primary:#2b6cb0;--accent:#ffd700;--text:#1a202c;--bg:#fff;--border:#e2e8f0;--active:#3182ce;--inactive:#edf2f7;--subtitle:#718096;--header-bg:#2d3748;--footer-bg:#2d3748}
+
+/* Header */
+header{background:var(--header-bg);padding:1rem 0;border-bottom:4px solid var(--primary);box-shadow:0 4px 6px rgba(0,0,0,.1);position:sticky;top:0;z-index:1000}
+.container{max-width:1440px;margin:0 auto;padding:0 1.5rem}
+.text-brand{color:var(--accent);font-size:1.75rem;font-weight:800;letter-spacing:-.025em}
+.hamburger{display:none;background:0 0;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+.hamburger:hover{color:var(--accent)}
+.nav{display:flex;justify-content:flex-end}
+.nav-list{display:flex;list-style:none;gap:1.5rem}
+.nav-link{color:#fff;text-decoration:none;font-size:1rem;font-weight:500;padding:.5rem 1rem;border-radius:6px}
+.nav-link:hover{color:var(--accent);background:rgba(255,255,255,.1)}
+
+
+
+
+/* Footer */
+footer{background:var(--footer-bg);color:#fff;padding:1.5rem;text-align:center;border-top:4px solid var(--primary)}
+
+/* Responsive */
+@media (max-width:991px){.search-job,.search-salary{display:none}.search-bar{flex:2}}
+@media (max-width:767px){.hamburger{display:block}.nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--header-bg);padding:1.5rem;box-shadow:0 4px 6px rgba(0,0,0,.1)}.nav-open{display:block}.nav-list{flex-direction:column;gap:1rem}.search-type{display:none}.searched-jobs{padding:0}.search-location{display:none}}
+@media (max-width:575px){.search-item{display:none}.search-box{padding-left:2rem}.searched-bar{flex-direction:column;align-items:flex-start;gap:.75rem}}
+
+
+.text-brand {
+    color: #ffcc00;
+    font-size: 26px;
+}
+
+/* Navigation */
+nav .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+nav .nav-link:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+
+/* Login Content Wrapper */
+.left-login h1,
+.card-login h1 {
+    color: #ffffff;
+}
+
+/* Center the black box properly */
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f6f5f8;
+    padding: 0;
+}
+
+.main-login {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f3f2e0;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 10px 40px #fa010156;
+    margin: auto;
+}
+
+.left-login {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.left-login h1 {
+    color: #020202;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.left-login-img {
+    width: 80%;
+    max-width: 400px;
+}
+
+.right-login {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-login {
+    width: 100%;
+    max-width: 400px;
+    background: #2f2841;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-login h1 {
+    color: #006eff;
+    font-weight: 800;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.textfield {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.textfield label {
+    color: #0c0c0cde;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.textfield input {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #514869;
+    color: #f0ffffde;
+    font-size: 14px;
+    outline: none;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.textfield input::placeholder {
+    color: #f0ffff94;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0;
+    margin: 20px 0;
+    background: #003cff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #00ff8052;
+    transition: background 0.3s ease;
+}
+
+.btn-login:hover {
+    background: #00cc6e;
+}
+
+.login-links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.login-links a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 950px) {
+    .main-login {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-login,
+    .right-login {
+        width: 100%;
+        height: auto;
+    }
+
+    .left-login-img {
+        width: 50%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .left-login h1 {
+        display: none;
+    }
+
+    .left-login-img {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .card-login {
+        width: 90%;
+    }
+
+    h1 {
+        color: white;
+    }
+
+    a {
+        pointer-events: auto;
+    }
+}

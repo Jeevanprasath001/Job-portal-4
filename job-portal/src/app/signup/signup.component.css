@@ -1,0 +1,260 @@
+/* Inter font */
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-Regular.woff2) format("woff2"),
+       url(/assets/fonts/Inter-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-Medium.woff2) format("woff2"),
+       url(/assets/fonts/Inter-Medium.woff) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-SemiBold.woff2) format("woff2"),
+       url(/assets/fonts/Inter-SemiBold.woff) format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-Bold.woff2) format("woff2"),
+       url(/assets/fonts/Inter-Bold.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: Inter;
+  src: url(/assets/fonts/Inter-ExtraBold.woff2) format("woff2"),
+       url(/assets/fonts/Inter-ExtraBold.woff) format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f7fa;
+  color: #1a202c;
+  line-height: 1.5;
+}
+
+/* Variables */
+:root {
+  --primary: #2b6cb0;
+  --accent: #ffd700;
+  --text: #1a202c;
+  --bg: #fff;
+  --border: #e2e8f0;
+  --active: #3182ce;
+  --inactive: #edf2f7;
+  --subtitle: #718096;
+  --header-bg: #2c3e50;
+  --footer-bg: #2c3e50;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+header {
+  background: var(--header-bg);
+  padding: 1rem 0;
+  border-bottom: 4px solid var(--primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.text-brand {
+  color: var(--accent);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.hamburger:hover {
+  color: var(--accent);
+}
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+.nav-link:hover {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sign-up Section */
+.sign-up {
+  max-width: 500px;
+  margin: 2rem auto;
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.heading {
+  text-align: center;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+.text img {
+  margin-right: 0.75rem;
+}
+.text input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+}
+.terms {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.terms input {
+  margin-right: 0.5rem;
+}
+.terms label {
+  font-size: 0.9rem;
+  color: var(--subtitle);
+}
+.terms a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.terms a:hover {
+  text-decoration: underline;
+}
+.signup-btn {
+  width: 100%;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.signup-btn:hover {
+  background: var(--active);
+}
+.conditions {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: var(--subtitle);
+}
+.conditions a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.conditions a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 4px solid var(--primary);
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+  .nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .nav-open {
+    display: block;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .sign-up {
+    margin: 1.5rem;
+    padding: 1.5rem;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 575px) {
+  .container {
+    padding: 0 1rem;
+  }
+  .text-brand {
+    font-size: 1.5rem;
+  }
+}
